@@ -1,5 +1,6 @@
 
-CREATE DATABASE IF NOT EXISTS quotes_db;
+# CREATE DATABASE IF NOT EXISTS quotes_db;
+# CREATE DATABASE quotes_db;
 
 USE quotes_db;
 
