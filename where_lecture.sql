@@ -15,6 +15,7 @@ USE employees;
 
 SHOW TABLES;
 
+
 # example queries on the employees table
 
 DESCRIBE employees;
@@ -79,16 +80,23 @@ SELECT DISTINCT first_name FROM employees;
 SELECT DISTINCT last_name FROM employees;
 SELECT DISTINCT first_name, last_name FROM employees;
 
+select distinct birth_date from employees;
+
+describe employees;
+
 # Chained where clauses
 
+# employees with an employee number of 10001 or first name of 'Parto'
 SELECT * FROM employees
 WHERE emp_no = 10001
    OR first_name = 'Parto';
 
+# female employees with birth date of September 2nd 1953
 SELECT * FROM employees
 WHERE birth_date = '1953-09-02'
   AND gender = 'F';
 
+# employees with a first name of 'Herber', or 'Baek' and and employee number less than 2000 or a first name of 'Dimitri'
 SELECT *
 FROM employees
 WHERE last_name IN ('Herber','Baek')
@@ -104,6 +112,6 @@ WHERE last_name IN ('Herber','Baek')
 # all employees hired in March
 # all employees hired before February 7, 1991
 # all employees with one of the following first names 'Elvis','Magy','Brendon'
-# same results different approach
-# DISTINCT
-# Chained where clauses
+# employees with an employee number of 10001 or first name of 'Parto'
+# female employees with birth date of September 2nd 1953
+# employees with a first name of 'Herber', or 'Baek' and and employee number less than 2000 or a first name of 'Dimitri'

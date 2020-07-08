@@ -13,8 +13,8 @@ SELECT * FROM employees ORDER BY last_name DESC;
 
 # Get employee names ordered by first_name descending and within duplicated first name results,
 # order the result by last name ascending
-SELECT first_name, last_name FROM employees
-ORDER BY first_name DESC, last_name;
+SELECT * FROM employees
+ORDER BY first_name, birth_date;
 
 
 # first employee hired

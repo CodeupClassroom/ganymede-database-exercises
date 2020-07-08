@@ -6,7 +6,7 @@
 
 USE employees;
 
-SELECT * FROM employees LIMIT 1;
+SELECT * FROM employees LIMIT 5 OFFSET 15;
 
 # OFFSET = LIMIT * PAGE - LIMIT
 # OFFSET (starts the result set from a given number of records in)
