@@ -10,7 +10,7 @@ USE employees;
 
 SELECT 'Something';
 
-SELECT CONCAT('Hello', ' ' , 'World');
+SELECT CONCAT('Hello', ' ' , 'World') as HWorld;
 
 # Use CONCAT() to output the following for all employees...
 # "Georgi Facello was born 1953-09-02" (and include column for emp_no)
@@ -21,7 +21,7 @@ CONCAT(
   last_name,
   ' was born ',
   birth_date
-), emp_no
+) as Info, emp_no as EmployeeNo
 FROM employees;
 
 
@@ -63,6 +63,8 @@ SELECT CONCAT(
 # count all table records
 SELECT COUNT(*) FROM employees;
 
+SELECT COUNT(*) FROM dept_emp;
+
 
 # count total filtered results
 SELECT COUNT(*)
@@ -84,6 +86,8 @@ GROUP BY birth_date;
 SELECT MAX(birth_date) FROM employees;
 SELECT MIN(birth_date) FROM employees;
 
+SELECT MAX(salary) from salaries;
+
 # SUM()
 SELECT salary, from_date
 FROM salaries
@@ -101,6 +105,7 @@ WHERE emp_no = 10001;
 SELECT AVG(salary)
 FROM salaries;
 
+select * from salaries;
 
 
 # ========== MATH FUNCTIONS (perform calculations) --
