@@ -7,8 +7,7 @@ USE employees;
 # Use concat() to combine their first and last name together as a single column in your results.
 SELECT CONCAT(first_name, ' ', last_name)
 FROM employees
-WHERE last_name LIKE 'E%'
-AND last_name LIKE '%E'
+WHERE last_name LIKE 'e%e'
 ORDER BY emp_no DESC;
 
 

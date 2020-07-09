@@ -35,6 +35,22 @@ SELECT gender FROM employees
 GROUP BY gender;
 
 
+SELECT gender, COUNT(*) from employees
+group by gender;
+
+SELECT gender, COUNT(*) from employees
+group by gender;
+
+SELECT gender, birth_date, COUNT(*) from employees
+group by gender, birth_date ORDER BY birth_date;
+
+# M  1952-02-01  6
+# F  1952-02-01  ?
+# M  1952-02-02  48
+# F  1952-02-02  ?
+
+
+
 
 # Grouping by multiple columns
 
@@ -87,7 +103,7 @@ SELECT COUNT(salary), MIN(salary), MAX(salary), AVG(salary), SUM(salary) FROM sa
 # Find the min, max, avg, total, and count of each employee's salaries
 SELECT emp_no, COUNT(salary), MIN(salary), MAX(salary), AVG(salary), SUM(salary) FROM salaries
 GROUP BY emp_no
-ORDER BY MIN(salary);
+ORDER BY MAX(salary) DESC;
 
 
 # show only the first and last name combinations with more than three employees each
